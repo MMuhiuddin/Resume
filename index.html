@@ -1,107 +1,421 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Mohammad Muhiuddin - Resume</title>
-    <style>
-        body {{
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 40px;
-            background: #f4f6f8;
-            color: #333;
-        }}
-        .container {{
-            background: #fff;
-            padding: 30px;
-            max-width: 850px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }}
-        h1 {{
-            color: #2c3e50;
-            margin-bottom: 0;
-        }}
-        h2 {{
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 30px;
-            color: #2c3e50;
-        }}
-        p, li {{
-            font-size: 15px;
-            line-height: 1.6;
-        }}
-        ul {{
-            padding-left: 20px;
-        }}
-        .contact a {{
-            color: #2980b9;
-            text-decoration: none;
-        }}
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammad Muhiuddin — Resume</title>
+  <meta name="description" content="AI Researcher, Cybersecurity, and Software Engineer." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --fg:#111; --bg:#fff; --muted:#555; --accent:#1f6feb;
+      --border:#e5e7eb; --chip:#f3f4f6;
+      --sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      --maxw: 1100px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --fg:#eaeef2; --bg:#0b0f14; --muted:#a0a6ad; --accent:#4ea1ff; --border:#1f2732; --chip:#121923; }
+    }
+    html,body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.55;margin:0}
+    .container{max-width:var(--maxw);margin:auto;padding:28px 20px}
+    header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;border-bottom:1px solid var(--border);padding-bottom:16px;margin-bottom:20px}
+    .profile-pic{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--border)}
+    .title{flex:1;min-width:260px}
+    .title h1{font-size:clamp(28px,4vw,40px);margin:0;line-height:1.2}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .meta{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--muted);margin-top:8px}
+    .meta a{color:var(--accent);text-decoration:none}
+    .meta a:hover{text-decoration:underline}
+    /* Layout */
+    .main-layout{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+    @media(max-width:800px){.main-layout{grid-template-columns:1fr}}
+    section{margin:26px 0}
+    h2{font-size:clamp(18px,3vw,22px);margin:0 0 12px}
+    h3{font-size:16px;margin:14px 0 6px;color:var(--accent)}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .item{padding:14px 0;border-bottom:1px dashed var(--border)}
+    .item:last-child{border-bottom:0}
+    .role{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+    .chip{background:var(--chip);border:1px solid var(--border);padding:4px 8px;border-radius:999px;font-size:13px}
+    /* Skills */
+    .skills-grid{display:grid;gap:10px}
+    .skill-group{padding:10px 0;border-bottom:1px dashed var(--border)}
+    .skill-group:last-child{border-bottom:0}
+    footer{margin-top:24px;border-top:1px solid var(--border);padding-top:12px;color:var(--muted);font-size:14px}
+    @media print{
+      .profile-pic{border:none}
+      @page{size:A4;margin:12mm}
+    }
+	.subhead {
+      margin: 10px 0 6px;
+      font-size: 15px;
+      color: #555; /* muted color */
+      font-weight: bold;
+    }
+    .env {
+      margin: 6px 0 0 18px;
+    }
+	.job-header {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: baseline;
+	  margin-bottom: 4px;
+	}
+
+	.job-title {
+	  font-weight: bold;
+	  color: #0056b3;
+	}
+
+	.job-dates {
+	  font-style: italic;
+	  color: #444;
+	  white-space: nowrap;
+	}
+  </style>
 </head>
 <body>
-<div class="container">
-    <h1>Mohammad Muhiuddin</h1>
-    <div class="contact">
-        <p><strong>Mobile:</strong> (+1) 732-522-6625<br>
-        <strong>Email:</strong> <a href="mailto:abro.mohiuddin@gmail.com">abro.mohiuddin@gmail.com</a><br>
-        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohammad-muhiuddin-75835336/">mohammad-muhiuddin</a></p>
+  <div class="container">
+    <header>
+      <img src="MOIN.jpeg" class="profile-pic" />
+      <div class="title">
+        <h1>Mohammad Muhiuddin</h1>
+        <div class="subtitle">AI Researcher · Cybersecurity · .NET Software Engineer</div>
+        <div class="meta">
+          <span>abro.mohiuddin@gmail.com</span>
+          <a href="https://github.com/k123009">github.com/mohammad-muhiuddin</a>
+          <a href="https://www.linkedin.com/in/mohammad-muhiuddin-75835336/">linkedin.com/in/mohammad-muhiuddin</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <!-- LEFT COLUMN -->
+      <div>
+      <section>
+  <h2><strong>Summary</strong></h2>
+  <p>
+    Innovative and results-driven Software Developer with over a decade of experience delivering
+    high-performance, scalable, and secure solutions across banking, stock exchange,
+    transportation, and education. Proven expertise in the .NET ecosystem and modern
+    engineering practices, taking enterprise applications from concept to production.
+  </p>
+  <ul>
+    <li>
+      Technical expertise: Client–server, desktop, and enterprise systems; microservices and
+      serverless architectures; C#, C++, multithreading; Redis caching; RabbitMQ; Hangfire;
+      Serilog; MongoDB; Entity Framework; Dapper; Web API; SPA and Angular 14;
+      UI with WPF (MVVM), WinForms, and DevExpress.
+    </li>
+    <li>
+      Cloud & integration: AWS (EC2, Lambda, Cognito, S3, CloudWatch) and serverless;
+      HSM-backed secure key storage; integrations with Firebase, Facebook API, 700Credit, 1Link,
+      and analytics platforms.
+    </li>
+    <li>
+      Systems & domain: High-performance financial systems and middleware for mission-critical
+      banking/stock-exchange workloads; private NuGet packages; data serialization in YAML, JSON, and XML;
+      Unity3D game builds via Unity Cloud Build.
+    </li>
+    <li>
+      Engineering practice: Agile/Scrum, CI/CD and DevOps pipelines; design patterns and best practices
+      for code quality, performance, and maintainability; unit and integration testing.
+    </li>
+    <li>
+      Leadership & collaboration: Team leading and mentoring; technical hiring and onboarding;
+      requirements gathering, analysis, estimation, and stakeholder communication.
+    </li>
+  </ul>
+</section>
+
+
+
+        <section>
+  <h2>Experience</h2>
+
+  <!-- Role 1 -->
+  <div class="item">
+    <div class="job-header">
+	  <span class="job-title">Senior .NET Developer — Carnival Cruise Line</span>
+	  <span class="job-dates">September 2022 – Present</span>
+	</div>
+
+    <div class="subhead">Summary</div>
+    <ul>
+      <li>Lead development and maintenance of the fleet-wide POS system using .NET (WPF, WinForms</li>
+      <li>Design and implement new web services in .NET 6 to enhance system functionality and integration.</li>
+      <li>Develop optimized stored procedures in Oracle to improve data processing efficiency.</li>
+      <li>Provide Tier-1 production support, troubleshooting and resolving critical (P1) issues reported by ships</li>
+      <li>Contribute to architectural design and participate in technical decision-making processes.</li>
+      <li>Plan and estimate project work in collaboration with business stakeholders to ensure timely delivery.</li>
+      <li>Modernize codebase by replacing legacy libraries with internally developed NuGet packages.</li>
+      <li>Integrate payment terminal solutions, including Verifone and Ingenico, into POS workflows.</li>
+      <li>Enforce code quality standards through pull request reviews and mentorship of team members.</li>
+    </ul>
+
+    <div class="subhead">Environment</div>
+    <ul class="env">
+      <li>Visual Studio 2022/2019, Oracle, WPF, WinForms, Angular, MVVM, MVC</li>
+      <li>Web APIs, NuGet, Unit testing, Dependency Injection, SOLID, Scrum, TFS</li>
+    </ul>
+  </div>
+   
+   
+<div class="item">
+ 
+  <div class="job-header">
+	  <span class="job-title">Software Engineer III — Noon DWC LLC</span>
+	  <span class="job-dates">March 2022 – August 2022</span>
+	</div>
+
+  <div class="subhead">Summary</div>
+  <ul>
+    <li>Integrated MongoDB as a caching component to enhance payment gateway performance.</li>
+    <li>Migrated legacy .NET Framework applications to .NET 6, improving maintainability and scalability.</li>
+    <li>Implemented the code-first approach with Entity Framework Core 6 for efficient data modeling.</li>
+    <li>Applied advanced multi-threading with robust synchronization handling.</li>
+    <li>Secured sensitive data using column-level encryption in SQL Server.</li>
+    <li>Developed and executed unit tests with MS Test to ensure software quality.</li>
+    <li>Created reusable libraries and published them to a private NuGet repository.</li>
+    <li>Used dependency injection for loose coupling and improved testability.</li>
+    <li>Worked with Windows-based Docker to manage and interact with containerized services.</li>
+    <li>Designed and deployed a custom logging NuGet package for the payment gateway.</li>
+    <li>Employed SonarCloud and Mend Bolt for static code analysis and vulnerability detection.</li>
+    <li>Researched, evaluated, and recommended new tools and technologies.</li>
+    <li>Conducted pull-request reviews and mentored team members on best practices.</li>
+    <li>Served as Team Lead, handling requirement gathering, documentation, and stakeholder coordination.</li>
+  </ul>
+
+  <div class="subhead">Environments</div>
+  <ul class="env">
+    <li>Visual Studio 2022, Docker for Windows, Entity Framework Core 6, C# 10, MongoDB, SQL Server,
+        Cosmos DB, RabbitMQ, Web APIs, NuGet, Unit Testing, Dependency Injection, SOLID, Scrum,
+        GitHub, TFS</li>
+  </ul>
+</div>
+
+
+ <div class="item">
+ 
+  <div class="job-header">
+	  <span class="job-title">Team Lead — Contour Software</span>
+	  <span class="job-dates">June 2018 – March 2022</span>
+	</div>
+
+ <div class="subhead">Summary</div>
+<ul>
+  <li>Collaborated with onsite teams in Canada and offshore teams in Pakistan to deliver high-quality releases.</li>
+  <li>Designed and built UIs using WinForms and WPF following the MVVM pattern.</li>
+  <li>Developed scalable Web APIs aligned with Clean Architecture principles.</li>
+  <li>Used Dapper (micro-ORM) for performant SQL Server data access.</li>
+  <li>Integrated dealership ERP with third-party platforms including 700Credit and CUDL.</li>
+  <li>Migrated multiple modules from legacy Pick Basic to the modern .NET stack.</li>
+  <li>Implemented asynchronous payment processing with RabbitMQ.</li>
+  <li>Built a secure, efficient payment processor using .NET Core.</li>
+  <li>Scheduled and managed background jobs with Hangfire.</li>
+  <li>Authored and optimized stored procedures on the legacy Universe database.</li>
+  <li>Maintained Swagger/OpenAPI documentation in YAML.</li>
+  <li>Partnered with the Product Owner to refine features and propose technical solutions.</li>
+  <li>Applied SOLID design principles to improve maintainability and extensibility.</li>
+  <li>Designed system architecture and recommended approaches for new initiatives.</li>
+  <li>Implemented dependency injection using Microsoft Unity.</li>
+  <li>Onboarded and trained new team members for faster ramp-up.</li>
+  <li>Served as Scrum Master alongside team lead responsibilities.</li>
+  <li>Delivered product demos to clients and stakeholders.</li>
+</ul>
+
+<div class="subhead">Environments</div>
+<ul class="env">
+  <li>Visual Studio 2017, .NET Framework 4.5, .NET Core 3.1, C#, Web APIs, YAML, Dapper, Multi-threading,
+      PostgreSQL, RabbitMQ, WPF, WinForms, MVVM, Universe, Pick Basic, Unit Testing, Dependency Injection,
+      Third-party Integrations, SOLID Principles, Jenkins, Scrum, Team Mentorship, GitHub</li>
+</ul>
+ 
+ <div class="item">
+ 
+  <div class="job-header">
+	  <span class="job-title">Senior Software Engineer — Scayle Pvt Ltd</span>
+	  <span class="job-dates">Feb 2017 – May 2018</span>
+	</div>
+
+ <div class="subhead">Summary</div>
+<ul>
+  <li>Developed <em>DayZee</em>, an educational game for Montessori children, using the Unity 3D game engine.</li>
+  <li>Configured Unity Cloud Build to automate multi-platform build processes.</li>
+  <li>Published the game on Google Play Store and Apple App Store.</li>
+  <li>Implemented a serverless architecture leveraging AWS services with automated deployment pipelines.</li>
+  <li>Integrated multiple third-party APIs, including Facebook API, AWS APIs, and Google Firebase.</li>
+  <li>Utilized advanced mobile analytics tools such as CleverTap, Firebase Analytics, AppsFlyer, and Appsee for user behavior tracking.</li>
+  <li>Developed the backend system in Node.js to support game functionality.</li>
+  <li>Created and executed unit tests for backend services using Node.js testing frameworks.</li>
+  <li>Designed and managed a data warehouse in AWS Redshift for analytics purposes.</li>
+  <li>Implemented DynamoDB for scalable NoSQL storage of game user data.</li>
+  <li>Used GitLab for version control and CI/CD integration.</li>
+  <li>Collaborated with the Product Owner to gather and refine requirements.</li>
+  <li>Worked closely with the design team, providing guidance for optimal game UI/UX.</li>
+  <li>Participated in recruitment activities and mentored new team members.</li>
+</ul>
+
+<div class="subhead">Environments</div>
+<ul class="env">
+  <li>AWS, Lambda Functions, S3, Redshift, Mobile Analytics, DynamoDB, Google Firebase, Unity 3D,
+      MonoDevelop, Xcode, Android Studio, YAML, Unity Cloud Build, Node.js, JavaScript, Unit Testing,
+      GitLab</li>
+</ul>
+
+  <div class="item">
+  <div class="job-header">
+    <span class="job-title">Senior Software Engineer — Reboot Technologies</span>
+    <span class="job-dates">April 2014 – February 2017</span>
+  </div>
+
+  <div class="subhead">Summary</div>
+  <ul>
+    <li>Contributed to the design and development of a high-performance cloud-based stock trading application delivered in a SaaS model.</li>
+    <li>Optimized application performance with a focus on memory management and system tuning.</li>
+    <li>Engineered scalable persistence strategies to support enterprise trading operations.</li>
+    <li>Developed file-based layouts and dynamic alignment of form controls for flexible UI rendering.</li>
+    <li>Implemented configurable dynamic UI validation to improve usability and reduce errors.</li>
+    <li>Built rich, interactive user interfaces using <em>WPF</em> and <em>WinForms</em>.</li>
+    <li>Leveraged the <em>DevExpress</em> toolkit to enhance UI/UX and collaborated with vendor support for advanced features.</li>
+    <li>Created dockable UIs with custom persistence to improve workflow efficiency.</li>
+    <li>Designed and delivered a custom UI design tool for the support team to streamline their operations.</li>
+    <li>Authored technical documentation and conducted testing of stock trading modules.</li>
+    <li>Mentored junior developers, providing guidance on coding practices and design patterns.</li>
+    <li>Used TFS for version control and collaboration across distributed teams.</li>
+  </ul>
+
+  <div class="subhead">Environments</div>
+  <ul class="env">
+    <li>Visual Studio 2013, .NET Framework, C#, WPF, WinForms, Dependency Injection, DevExpress, 
+        Persistence Frameworks, Custom UI Design Tools, TFS, WinMerge, JSON, XML</li>
+  </ul>
+</div>
+
+  <div class="item">
+  <div class="job-header">
+    <span class="job-title">Software Engineer — Avanza Solutions</span>
+    <span class="job-dates">February 2013 – April 2014</span>
+  </div>
+
+  <div class="subhead">Summary</div>
+  <ul>
+    <li>Contributed to the development of banking products including financial middleware and ATM controllers.</li>
+    <li>Delivered both onsite and offsite development using simulators and live banking systems.</li>
+    <li>Built high-performance banking applications with C++ and the .NET Framework.</li>
+    <li>Developed user interfaces with WPF and WinForms, following MVVM practices.</li>
+    <li>Created RESTful web services to enable utility bill payments.</li>
+    <li>Integrated applications with Sybase databases serving as core banking hosts.</li>
+    <li>Implemented encryption algorithms and integrated with HSMs to secure sensitive financial data.</li>
+    <li>Performed integrations with a wide range of national and international systems including Core Banking hosts, 1Link, CRM, IVR, Internet Banking, and utility payment networks.</li>
+    <li>Led 1Link certification for Bank Islami Pakistan.</li>
+    <li>Executed RFCs, system upgrades, and fresh deployments for multiple banking clients.</li>
+    <li>Worked extensively with ISO8583 message formats for banking channel interactions.</li>
+    <li>Conducted UAT testing and documented newly added features for knowledge sharing.</li>
+    <li>Delivered and supported live projects for Standard Chartered Bank, Bank Islami, and JS Bank, including post-live issue resolution.</li>
+  </ul>
+
+  <div class="subhead">Environments</div>
+  <ul class="env">
+    <li>Visual Studio 2013, C#, C++, .NET Framework, WPF, WinForms, MVVM, HSM, Socket Workbench,
+        ISO8583, ATM Simulator, Web Services, Sybase, Oracle, IBM MQSeries</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="job-header">
+    <span class="job-title">Software Engineer — Mixit Technologies Inc.</span>
+    <span class="job-dates">July 2011 – November 2012</span>
+  </div>
+
+  <div class="subhead">Summary</div>
+  <ul>
+    <li>Enhanced features of a high-performance stock trading application using the .NET Framework.</li>
+    <li>Developed a managed C++ wrapper to integrate unmanaged components into a .NET application.</li>
+    <li>Implemented UI enhancements using third-party controls such as Krypton, Telerik, and DevExpress.</li>
+    <li>Worked on a .NET-based order allocation system to support trading workflows.</li>
+    <li>Built an internal chat messenger in C# for organizational use.</li>
+    <li>Utilized sockets for efficient inter-process communication in distributed systems.</li>
+    <li>Resolved bugs and performed troubleshooting in multi-threaded applications.</li>
+    <li>Conducted testing and prepared documentation for newly delivered features.</li>
+    <li>Applied GoF design patterns and SOLID principles to improve code maintainability.</li>
+    <li>Collaborated using VSS for version control and code management.</li>
+  </ul>
+
+  <div class="subhead">Environments</div>
+  <ul class="env">
+    <li>Visual Studio 2005, C#, .NET Framework, Managed C++, Unmanaged C++, SQL Server,
+        WinForms, DevExpress, Telerik, Krypton, VSS, WinMerge</li>
+  </ul>
+</div>
+
+  <!-- Copy the structure above for additional roles -->
+</section>
+
+
+        <section>
+          <h2>Education</h2>
+          <div class="item">
+            <div class="role">
+              <strong>M.S. in Computer Science — National University of Computer & Emerging Sciences</strong>
+              <span class="muted">2014</span>
+            </div>
+          </div>
+		  <div class="item">
+            <div class="role">
+              <strong>B.S. in Computer Science — National University of Computer & Emerging Sciences</strong>
+              <span class="muted">2011</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <section>
+          <h2>Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group"><h3>Languages</h3>
+              <div class="chips">
+                <span class="chip">C#</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span>
+                <span class="chip">C++</span><span class="chip">C</span><span class="chip">XAML</span>
+                <span class="chip">YAML</span><span class="chip">JSON</span>
+              </div>
+            </div>
+            <div class="skill-group"><h3>.NET Technologies</h3><div class="chips">
+              <span class="chip">WPF</span><span class="chip">MVVM</span><span class="chip">MVC</span>
+              <span class="chip">WinForms</span><span class="chip">Dependency Injection</span>
+              <span class="chip">Multi-threading</span><span class="chip">.NET Core</span>
+              <span class="chip">.NET</span><span class="chip">Dapper</span><span class="chip">Redis</span>
+              <span class="chip">Hangfire</span><span class="chip">Entity Framework</span><span class="chip">ADO.NET</span>
+            </div></div>
+            
+            <div class="skill-group"><h3>Amazon Web Services</h3><div class="chips">
+              <span class="chip">EC2</span><span class="chip">Cognito</span><span class="chip">Redshift</span>
+              <span class="chip">S3</span><span class="chip">CloudWatch</span>
+              <span class="chip">Mobile Analytics</span><span class="chip">Lambda</span>
+            </div></div>
+            <div class="skill-group"><h3>Web Technologies</h3><div class="chips"><span class="chip">Angular 14</span><span class="chip">JavaScript</span><span class="chip">CSS</span><span class="chip">HTML</span></div></div>
+            <div class="skill-group"><h3>IDEs</h3><div class="chips"><span class="chip">Visual Studio</span><span class="chip">VS Code</span><span class="chip">MonoDevelop</span></div></div>
+            <div class="skill-group"><h3>Databases</h3><div class="chips"><span class="chip">SQL Server</span><span class="chip">Oracle</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span></div></div>
+            <div class="skill-group"><h3>Source Control</h3><div class="chips"><span class="chip">Git</span><span class="chip">TFS</span></div></div>
+			<div class="skill-group"><h3>Game Engine</h3><div class="chips"><span class="chip">Unity3D</span></div></div>
+			<div class="skill-group"><h3>Message Broker</h3><div class="chips"><span class="chip">RabbitMQ</span></div></div>
+          </div>
+        </section>
+      </aside>
     </div>
 
-    <h2>Career Summary</h2>
-    <ul>
-        <li>Enthusiastic software developer with over 12 years of experience across banking, stock exchange, transport, and education industries.</li>
-        <li>Proficient in software design, development, and troubleshooting of client-server and enterprise systems.</li>
-        <li>.NET expert using multithreading, Redis, RabbitMQ, Web APIs, Entity Framework, Dapper, MongoDB, and more.</li>
-        <li>Experienced in building microservices and serverless architectures using AWS and .NET.</li>
-        <li>Built SPAs using Angular 14; designed UIs with WPF (MVVM) and WinForms; experienced with DevExpress.</li>
-    </ul>
+    <footer>
+      <div>© <span id="year"></span> Mohammad Muhiuddin</div>
+    </footer>
+  </div>
 
-    <h2>Technical Skills</h2>
-    <p><strong>Languages:</strong> C#, JavaScript, TypeScript, C++, XAML, YAML, JSON</p>
-    <p><strong>Frameworks:</strong> .NET Core, MVC, MVVM, Entity Framework, Dapper</p>
-    <p><strong>Tools:</strong> RabbitMQ, Hangfire, Serilog, Docker, Git, TFS, Jenkins</p>
-    <p><strong>Cloud:</strong> AWS (Lambda, S3, Cognito, Redshift), Azure</p>
-    <p><strong>Databases:</strong> SQL Server, PostgreSQL, MongoDB</p>
-
-    <h2>Professional Experience</h2>
-    <p><strong>Senior .NET Developer – Carnival Cruise Line (Sep 2022 – Present)</strong></p>
-    <ul>
-        <li>Developed POS system using .NET (WPF/WinForms) and created Web APIs in .NET 6.</li>
-        <li>Managed Oracle procedures and provided L1/L2 support for ship systems.</li>
-        <li>Introduced new NuGet packages; handled payment terminal integrations.</li>
-    </ul>
-
-    <p><strong>Software Engineer III – Noon DWC LLC (Mar 2022 – Aug 2022)</strong></p>
-    <ul>
-        <li>Migrated legacy systems to .NET 6; integrated MongoDB caching.</li>
-        <li>Used Docker, dependency injection, static code analysis, and private NuGet hosting.</li>
-    </ul>
-
-    <p><strong>Team Lead – Contour Software (Jun 2018 – Mar 2022)</strong></p>
-    <ul>
-        <li>Led ERP product development, third-party integrations, and API development using .NET Core.</li>
-        <li>Performed team mentorship, demos, and Scrum Master duties.</li>
-    </ul>
-
-    <p><strong>Senior Software Engineer – Scayle Pvt Ltd (Feb 2017 – May 2018)</strong></p>
-    <ul>
-        <li>Built educational mobile games using Unity3D and deployed via Unity Cloud Build.</li>
-        <li>Managed cloud analytics using AWS, Firebase, and Clevertap.</li>
-    </ul>
-
-    <p><strong>Software Engineer – Reboot Technologies / Avanza / Mixit (2011 – 2017)</strong></p>
-    <ul>
-        <li>Worked on stock trading and banking systems using C++, .NET, and ISO8583.</li>
-        <li>Developed secure financial middleware, integrated HSM, and maintained legacy UIs.</li>
-    </ul>
-
-    <h2>Education</h2>
-    <p><strong>MS in Computer Science</strong>, National University of Computer & Emerging Sciences (2012 – 2014)</p>
-    <p><strong>BS in Computer Science</strong>, National University of Computer & Emerging Sciences (2007 – 2011)</p>
-</div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
